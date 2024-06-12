@@ -828,11 +828,11 @@ Banner Style
 }
 
 .main-banner:after {
-  content: url(../images/banner-right.png);
+  content: url(../images/ruko.png);
   top: -1px;
   right: 0;
   position: absolute;
-  width: 861px;
+  width: 800px;
   height: 746px;
   z-index: -1;
 }
@@ -913,7 +913,7 @@ Services Style
 }
 
 .services::before {
-  content: url(../images/services-left.jpg);
+  content: url(../images/ruko-kiri.png);
   top: 120px;
   left: 0;
   position: absolute;
