@@ -1,3 +1,8 @@
+
+<?php 
+  require_once('auth.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,8 +101,17 @@ https://templatemo.com/tm-582-tale-seo-agency
                           </ul>
                       </li>
                       <li class="scroll-to-section"><a href="#contact">Submission</a></li><!-- ini buat submission(pikiranku abis ngisi data disini nanti dikirim ke page baru buat ngelengkapin datanya (disini data kecil kceilan)) -->
-                      <li class="scroll-to-section"><a href="login_form.html">Login</a></li><!-- ini awalnya #contact -->
-                  </ul>   
+                      <?php if(!auth()) : ?>
+                      <li class="scroll-to-section"><a href="login.php">Login</a></li><!-- ini awalnya #contact -->
+                      <?php else: ?>
+                      <li class="has-sub">
+                        <a href="javascript:void(0)" class="fw-bold"><?= $_SESSION['username'] ?></a>
+                        <ul class ="sub-menu"> 
+                          <li><a href="logout.php">logout</a></li>
+                        </ul>
+                      </li>
+                      <?php endif; ?>
+                      </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
