@@ -55,8 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - SIWARSA</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -68,13 +70,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endif; ?>
         });
     </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
+
+
 <div class="wrapper">
     <div class="container main">
         <div class="row">
             <div class="col-md-6 side-image">
-                <h1>Dev comment: masuk lewat tombol masuk disini</h1>
                 <img src="loginimg.jpeg" alt="">
                 <div class="text">
                     <h1 class="h1">Mari Bergabung Dengan Kami</h1>
