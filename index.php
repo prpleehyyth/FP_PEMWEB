@@ -45,9 +45,9 @@ https://templatemo.com/tm-582-tale-seo-agency
         <div class="col-lg-8 col-sm-9">
           <div class="left-info">
             <ul>
-              <li><a href="#"><i class="fa fa-phone"></i>+000 1234 5678</a></li>
-              <li><a href="#"><i class="fa fa-envelope"></i>infocompany@email.com</a></li>
-              <li><a href="#"><i class="fa fa-map-marker"></i>St. London 54th Bull</a></li>
+              <li><a href="https://wa.me/6289631317064" target="_blank"><i class="fa fa-phone"></i>+62 89631317064</a></li>
+              <li><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank"><i class="fa fa-envelope"></i>support@siwarsa.com</a></li>
+              <li><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank"><i class="fa fa-map-marker"></i>SIWARSA Headquarter</a></li>
             </ul>
           </div>
         </div>
@@ -73,8 +73,8 @@ https://templatemo.com/tm-582-tale-seo-agency
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="" style="max-width: 112px;">
+                    <a href="index.php" class="logo">
+                        <img src="assets/images/logo_only.png" alt="" style="max-width: 112px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
