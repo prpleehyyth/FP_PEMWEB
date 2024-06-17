@@ -55,8 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - SIWARSA</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -68,17 +70,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endif; ?>
         });
     </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
+
+
 <div class="wrapper">
     <div class="container main">
         <div class="row">
             <div class="col-md-6 side-image">
-                <h1>Dev comment: masuk lewat tombol masuk disini</h1>
-                <img src="loginimg.jpeg" alt="">
+                <img src="assets/images/fullSiwarsa.png" alt="">
                 <div class="text">
                     <h1 class="h1">Mari Bergabung Dengan Kami</h1>
-                    <p class="h1">BumDESGo! adalah platform</p>
+                    <p class="h1">SIWARSA adalah platform penyewaan ruko antara pemerintah desa dan masyarakat</p>
                 </div>
             </div>
             <div class="col-md-6 right">
@@ -92,6 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="input-field">
                             <input type="password" class="input" id="password" name="password" required>
                             <label for="password">Password</label>
+                            <button class="toggle-button" type="button" id="toggleButton" aria-label="Toggle password visibility" title="Toggle password visibility" src="assets/images/view.png">🐵</button>
                         </div>
                         <div class="input-field">
                             <input type="submit" class="submit" value="Masuk Akun">
@@ -105,6 +120,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </div>
+<script>
+        const passwordField = document.getElementById('password');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', function() {
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleButton.textContent = '🙈';
+            } else {
+                passwordField.type = 'password';
+                toggleButton.textContent = '🐵';
+            }
+        });
+    </script>
 </body>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -167,10 +196,10 @@ i {
     box-sizing: border-box;
 }
 img {
-    width: 35px;
+    width: 100px;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 20px;
+    left: 20px;
 }
 .input-box header {
     font-weight: 700;
@@ -239,6 +268,17 @@ span a:hover {
     text-decoration: underline;
     color: #000;
 }
+.toggle-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 1.2rem;
+        }
 @media only screen and (max-width: 768px) {
     .side-image {
         border-radius: 10px 10px 0 0;
