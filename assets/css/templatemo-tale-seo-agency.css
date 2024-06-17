@@ -459,6 +459,16 @@ Header Style
   top: 45px;
 }
 
+.header-area .main-nav .nav li.sub-username:after {
+  font-family: FontAwesome;
+  content: "\f107";
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 45px;
+}
+
 .background-header .main-nav .nav li.has-sub:after {
   top: 32px;
 }

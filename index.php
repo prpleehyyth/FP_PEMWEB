@@ -104,8 +104,8 @@ https://templatemo.com/tm-582-tale-seo-agency
                       <?php if(!auth()) : ?>
                       <li class="scroll-to-section"><a href="login.php">Login</a></li><!-- ini awalnya #contact -->
                       <?php else: ?>
-                      <li class="has-sub">
-                        <a href="javascript:void(0)" class="fw-bold"><?= $_SESSION['username'] ?></a>
+                      <li class="has-sub sub-username">
+                        <a href="javascript:void(0)" ><?= $_SESSION['username'] ?></a>
                         <ul class ="sub-menu"> 
                           <li><a href="logout.php">logout</a></li>
                         </ul>
