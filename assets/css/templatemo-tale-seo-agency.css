@@ -354,7 +354,7 @@ Header Style
 }
 
 .header-area .main-nav .logo {
-  margin-top: 0px;
+  margin-top: 25px;
   flex-basis: 20%;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -363,7 +363,7 @@ Header Style
 }
 
 .background-header .main-nav .logo {
-  margin-top: 0px;
+  margin-top: 25px;
 }
 
 .header-area .main-nav .nav {
@@ -662,7 +662,7 @@ Header Style
   }
   .header-area .main-nav .logo {
     position: absolute;
-    left: 30px;
+    left: 0px;
     top: 0px;
   }
   .background-header .main-nav .logo {

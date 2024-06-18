@@ -74,7 +74,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.php" class="logo">
-                        <img src="assets/images/logo_only.png" alt="" style="max-width: 112px;">
+                        <img src="assets/images/logo_onlyy.png" alt="" style="max-width: 150px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
@@ -148,7 +148,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                 <div class="icon">
                   <img src="assets/images/services-01.jpg" alt="discover SEO" class="templatemo-feature">
                 </div>
-                <h4>Ruko 1 - Mini Resto</h4>
+                <a href="e-commerce.html"><h4>Ruko 1 - Mini Resto</h4></a>
                 <p>Cocok untuk usaha F&B dengan dapur</p>
               </div>
             </div>
