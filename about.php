@@ -76,7 +76,7 @@ https://templatemo.com/tm-582-tale-seo-agency
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.php" class="logo">
-              <img src="assets/images/logo_only.png" alt="" style="max-width: 112px;">
+              <img src="assets/images/logo_onlyy.png" alt="" style="max-width: 112px;">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -115,27 +115,7 @@ https://templatemo.com/tm-582-tale-seo-agency
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <div class="page-heading">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 align-self-center">
-          <div class="caption  header-text">
-            <h6>SEO DIGITAL AGENCY</h6>
-            <div class="line-dec"></div>
-            <h4>Discover More <em>About Us</em></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et
-              dolore.</p>
-            <div class="main-button"><a href="#">Discover More</a></div>
-            <span>or</span>
-            <div class="second-button"><a href="#">Check our FAQs</a></div>
-          </div>
-        </div>
-        <div class="col-lg-5 align-self-center">
-          <img src="assets/images/about-us-image.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="contact-us section" id="contact">
     <div class="container">
@@ -299,20 +279,19 @@ https://templatemo.com/tm-582-tale-seo-agency
                     <div class="col-lg-4">
                       <div class="info-item">
                         <i class="fa fa-phone"></i>
-                        <h4><a href="#">010-020-0340</a></h4>
+                        <h4><a href="https://wa.me/6289631317064" target="_blank">+62 89631317064</a></h4>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="info-item">
                         <i class="fa fa-envelope"></i>
-                        <h4><a href="#">info@company.com</a></h4>
-                        <h4><a href="#">hello@company.com</a></h4>
+                        <h4><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank">support@siwarsa.com</a></h4>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="info-item">
                         <i class="fa fa-map-marker"></i>
-                        <h4><a href="#">Sunny Isles Beach, FL 33160, United States</a></h4>
+                        <h4><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank">SIWARSA Headquarter</a></h4>
                       </div>
                     </div>
                   </div>
@@ -324,66 +303,11 @@ https://templatemo.com/tm-582-tale-seo-agency
       </div>
     </div>
   </div>
-  <div class="video-info section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="video-thumb">
-            <img src="assets/images/video-thumb.jpg" alt="">
-            <a href="http://youtube.com" target="_blank"><i class="fa fa-play"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-6 align-self-center">
-          <div class="section-heading">
-            <h2>Detailed Information On What We Do &amp; Who We Are</h2>
-            <div class="line-dec"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et
-              dolore dolor.</p>
-          </div>
-          <div class="skills">
-            <div class="skill-slide marketing">
-              <div class="fill"></div>
-              <h6>SEO Marketing</h6>
-              <span>90%</span>
-            </div>
-            <div class="skill-slide digital">
-              <div class="fill"></div>
-              <h6>Digital Marketing</h6>
-              <span>80%</span>
-            </div>
-            <div class="skill-slide media">
-              <div class="fill"></div>
-              <h6>Social Media Management</h6>
-              <span>95%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="happy-clients section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <h2>Our 4 Steps <em>To Success</em> &amp; <span>Happy Clients</span></h2>
-            <div class="line-dec"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers.</p>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="naccs">
-            <div class="tabs">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="menu">
-                    <div class="active"><span>Project Introduction</span></div>
-                    <div><span>Work Development</span></div>
-                    <div><span>Data Analysis</span></div>
-                    <div class="last-item"><span>Project Finishing</span></div>
-                  </div>
-                </div>
                 <div class="col-lg-12">
                   <ul class="nacc">
                     <li class="active">

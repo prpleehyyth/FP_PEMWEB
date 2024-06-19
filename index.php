@@ -85,11 +85,11 @@ https://templatemo.com/tm-582-tale-seo-agency
                       <li class="has-sub">
                           <a href="javascript:void(0)">Bantuan</a>
                           <ul class="sub-menu">
-                              <li><a href="#contact">Komplain</a></li>
-                              <li><a href="faqs.html">FAQs  </a></li>
+                              <li><a href="History.php">History</a></li>
+                              <li><a href="pembayaran.php">Pembayaran</a></li>
                           </ul>
                       </li>
-                      <li class="scroll-to-section"><a href="about.php">Submission</a></li>
+                      <li class="scroll-to-section"><a href="about.php">Pengajuan</a></li>
                       <?php if(!auth()) : ?>
                       <li class="scroll-to-section"><a href="login.php">Login</a></li><!-- ini awalnya #contact -->
                       <?php else: ?>
@@ -148,8 +148,8 @@ https://templatemo.com/tm-582-tale-seo-agency
                 <div class="icon">
                   <img src="assets/images/services-01.jpg" alt="discover SEO" class="templatemo-feature">
                 </div>
-                <a href="ruko1.php"><h4>Ruko 1 - Mini Resto</h4></a>
-                <p>Cocok untuk usaha F&B dengan dapur</p>
+                <a href="ruko1.php"><h4>Ruko 01</h4></a>
+                <p>Rumah Toko (Ruko) satu lantai di lokasi strategis pusat bisnis. Cocok untuk berbagai usaha dengan fasilitas lengkap. Akses mudah ke fasilitas umum dan lingkungan ramai dengan potensi pelanggan tinggi.</p>
               </div>
             </div>
             <div class="col-lg-6 col-sm-6">
@@ -157,8 +157,8 @@ https://templatemo.com/tm-582-tale-seo-agency
                 <div class="icon">
                   <img src="assets/images/services-02.jpg" alt="data analysis" class="templatemo-feature">
                 </div>
-                <h4>Ruko 2 - Mini Resto</h4>
-                <p>Cocok untuk usaha F&B dengan dapur</p>
+                <a href="ruko2.php"><h4>Ruko 02</h4></a>
+                <p>Rumah Toko (Ruko) satu lantai di lokasi strategis pusat bisnis. Cocok untuk berbagai usaha dengan fasilitas lengkap.</p>
               </div>
             </div>
             <div class="col-lg-6 col-sm-6">
@@ -166,8 +166,8 @@ https://templatemo.com/tm-582-tale-seo-agency
                 <div class="icon">
                   <img src="assets/images/services-03.jpg" alt="precise data" class="templatemo-feature">
                 </div>
-                <h4>Ruko 3 - Mini Cafe</h4>
-                <p>Cocok untuk Cafe dengan counter untuk mesin kopi</p>
+                <a href="ruko3.php"><h4>Ruko 03</h4></a>
+                <p>Rumah Toko (Ruko) satu lantai di lokasi strategis pusat bisnis. Cocok untuk berbagai usaha dengan fasilitas lengkap.</p>
               </div>
             </div>
             <div class="col-lg-6 col-sm-6">
@@ -175,8 +175,8 @@ https://templatemo.com/tm-582-tale-seo-agency
                 <div class="icon">
                   <img src="assets/images/services-04.jpg" alt="SEO marketing" class="templatemo-feature">
                 </div>
-                <h4>Ruko 4 - Mini Cafe</h4>
-                <p>Cocok untuk Cafe dengan counter untuk mesin kopi</p>
+                <a href="ruko4.php"><h4>Ruko 04</h4></a>
+                <p>Rumah Toko (Ruko) satu lantai di lokasi strategis pusat bisnis. Cocok untuk berbagai usaha dengan fasilitas lengkap.</p>
               </div>
             </div>
           </div>
