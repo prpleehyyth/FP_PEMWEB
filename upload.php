@@ -39,7 +39,6 @@ if (isset($_POST['submit'])) {
 
     if ($stmt->execute()) {
         echo "Form submitted successfully and data saved.";
-        
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -48,4 +47,3 @@ if (isset($_POST['submit'])) {
 }
 
 $conn->close();
-?>
