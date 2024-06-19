@@ -62,7 +62,6 @@
                   <table class="table table-head-fixed text-nowrap">
                     <thead>
                       <tr>
-                        <th>ID</th>
                         <th>Email</th>
                         <th>Username</th>
                         <th>Fullname</th>
@@ -72,18 +71,17 @@
                     <tbody>
                       <?php
                       include 'db_connect.php';
-                      $sql = "SELECT id, email, username, fullname FROM users";
+                      $sql = "SELECT email, username, fullname FROM users";
                       $result = $conn->query($sql);
 
                       if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                           echo "<tr>";
-                          echo "<td>" . $row["id"] . "</td>";
                           echo "<td>" . $row["email"] . "</td>";
                           echo "<td>" . $row["username"] . "</td>";
                           echo "<td>" . $row["fullname"] . "</td>";
-                          echo "<td><a href='edit.php?id=" . $row['id'] . "' class='btn btn-info'>Edit</a>
-                                    <a href='delete.php?id=" . $row['id'] . "' class='btn btn-danger'>Delete</a></td>";
+                          echo "<td><a href='edit.php?id=" . $row['username'] . "' class='btn btn-info'>Edit</a>
+                                    <a href='delete.php?id=" . $row['username'] . "' class='btn btn-danger'>Delete</a></td>";
                           echo "</tr>";
                         }
                       } else {
