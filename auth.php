@@ -1,9 +1,10 @@
-<?php 
+<?php
 
 session_start();
 
-function auth(){
-    if(isset($_SESSION['user_id'])) return true;
+function auth()
+{
+    if (isset($_SESSION['username'])) return true;
 
     return false;
 }
