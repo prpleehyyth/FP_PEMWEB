@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
 TemplateMo 582 Tale SEO Agency
@@ -74,7 +74,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.php" class="logo">
-                        <img src="assets/images/logo_only.png" alt="" style="max-width: 112px;">
+                        <img src="assets/images/logo_onlyy.png" alt="" style="max-width: 150px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
@@ -148,7 +148,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                 <div class="icon">
                   <img src="assets/images/services-01.jpg" alt="discover SEO" class="templatemo-feature">
                 </div>
-                <h4>Ruko 1 - Mini Resto</h4>
+                <a href="ruko1.php"><h4>Ruko 1 - Mini Resto</h4></a>
                 <p>Cocok untuk usaha F&B dengan dapur</p>
               </div>
             </div>
@@ -203,42 +203,42 @@ https://templatemo.com/tm-582-tale-seo-agency
         <div class="col-lg-12">
           <div class="owl-features owl-carousel">
             <div class="item">
-              <img src="assets/images/projects-01.jpg" alt="">
+              <img src="assets/images/ruko1.png" alt="">
               <div class="down-content">
                 <h4>Digital Agency HTML Templates</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-02.jpg" alt="">
+              <img src="assets/images/ruko2.png" alt="">
               <div class="down-content">
                 <h4>Admin Dashboard CSS Templates</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-03.jpg" alt="">
+              <img src="assets/images/ruko3.png" alt="">
               <div class="down-content">
                 <h4>Best Responsive Website Layouts</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-04.jpg" alt="">
+              <img src="assets/images/ruko4.png" alt="">
               <div class="down-content">
                 <h4>HTML CSS Layouts for your websites</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-02.jpg" alt="">
+              <img src="assets/images/ruko5.png" alt="">
               <div class="down-content">
                 <h4>Bootstrap 5 Themes for Free</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-03.jpg" alt="">
+              <img src="assets/images/ruko4.png" alt="">
               <div class="down-content">
                 <h4>Mobile Friendly Website Layouts</h4>
                 <a href="#"><i class="fa fa-link"></i></a>

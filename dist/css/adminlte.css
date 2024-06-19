@@ -4854,6 +4854,7 @@ input[type="button"].btn-block {
 }
 
 .card-body {
+  margin-top: 100px;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
@@ -10686,7 +10687,8 @@ body,
 }
 
 .wrapper .content-wrapper {
-  min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px));
+  min-height: calc(100vh - calc(3.5rem + 1px));
+  padding-top: calc(3.5rem + 10px);
 }
 
 .layout-boxed .wrapper {

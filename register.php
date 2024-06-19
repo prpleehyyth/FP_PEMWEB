@@ -147,7 +147,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     .side-image {
-        background-image: url("loginimg.jpeg");
+        background-image: url("assets/images/background.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
