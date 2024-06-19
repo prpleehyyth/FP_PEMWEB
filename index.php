@@ -205,42 +205,42 @@ https://templatemo.com/tm-582-tale-seo-agency
             <div class="item">
               <img src="assets/images/ruko1.png" alt="">
               <div class="down-content">
-                <h4>Digital Agency HTML Templates</h4>
+                <h4>Toko Sembako Anugerah</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
               <img src="assets/images/ruko2.png" alt="">
               <div class="down-content">
-                <h4>Admin Dashboard CSS Templates</h4>
+                <h4>Warung Serba Ada Pak Fadil</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
               <img src="assets/images/ruko3.png" alt="">
               <div class="down-content">
-                <h4>Best Responsive Website Layouts</h4>
+                <h4>Warung Sumber Berkah</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
               <img src="assets/images/ruko4.png" alt="">
               <div class="down-content">
-                <h4>HTML CSS Layouts for your websites</h4>
+                <h4>Warung Kopi Mas Satrio</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
               <img src="assets/images/ruko5.png" alt="">
               <div class="down-content">
-                <h4>Bootstrap 5 Themes for Free</h4>
+                <h4>Toko Kebutuhan Bu Rina</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
               <img src="assets/images/ruko4.png" alt="">
               <div class="down-content">
-                <h4>Mobile Friendly Website Layouts</h4>
+                <h4>Warung Kopi Pak Saiful</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
