@@ -112,71 +112,16 @@ https://templatemo.com/tm-582-tale-seo-agency
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <div class="page-heading">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 align-self-center">
-          <div class="caption  header-text">
-            <h6>SEO DIGITAL AGENCY</h6>
-            <div class="line-dec"></div>
-            <h4>Most Frequently Asked <em>Questions</em> Here <em>?</em></h4>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <img src="assets/images/faqs-image.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="happy-steps">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2>Our 4 Steps To Success &amp; Happy Clients</h2>
-        </div>
-        <div class="col-lg-12">
-          <div class="steps">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="item">
-                  <img src="assets/images/services-01.jpg" alt="" style="max-width: 66px; border-radius: 50%; margin: 0 auto;">
-                  <h4>Project Introduction</h4>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="item">
-                  <img src="assets/images/services-02.jpg" alt="" style="max-width: 66px; border-radius: 50%; margin: 0 auto;">
-                  <h4>Work Development</h4>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="item">
-                  <img src="assets/images/services-03.jpg" alt="" style="max-width: 66px; border-radius: 50%; margin: 0 auto;">
-                  <h4>Data Analysis</h4>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="item last-item">
-                  <img src="assets/images/services-04.jpg" alt="" style="max-width: 66px; border-radius: 50%; margin: 0 auto;">
-                  <h4>Project Finishing</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 
   <div class="most-asked section">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="section-heading">
-            <h2>Most <em>Frequently</em> Asked <span>Questions</span> ?</h2>
+            <h2><em>Metode Pembayaran</em></h2>
             <div class="line-dec"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers.</p>
+            <p>Pilih salah satu metode pembayaran</p>
           </div>
         </div>
       </div>
@@ -185,7 +130,7 @@ https://templatemo.com/tm-582-tale-seo-agency
           <div class="accordions is-first-expanded">
             <article class="accordion">
               <div class="accordion-head">
-                  <span>Sartorial Butcher Humblebrag</span>
+                  <span>Transfer Bank</span>
                   <span class="icon">
                       <i class="icon fa fa-chevron-right"></i>
                   </span>
@@ -198,7 +143,7 @@ https://templatemo.com/tm-582-tale-seo-agency
           </article>
           <article class="accordion">
             <div class="accordion-head">
-                <span>Jean Shorts Microdosing</span>
+                <span>E-Wallet</span>
                 <span class="icon">
                     <i class="icon fa fa-chevron-right"></i>
                 </span>
@@ -213,7 +158,7 @@ https://templatemo.com/tm-582-tale-seo-agency
           </article>
           <article class="accordion">
             <div class="accordion-head">
-                <span>Waistcoat Aesthetic Polaroid</span>
+                <span>Virtual Account</span>
                 <span class="icon">
                     <i class="icon fa fa-chevron-right"></i>
                 </span>
@@ -246,7 +191,7 @@ https://templatemo.com/tm-582-tale-seo-agency
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-heading">
-                  <h2>Get a <em>Free Quote</em> Now</h2>
+                  <h2>Cek<em> Data Ajuan Anda</em> Terlebih Dahulu</h2>
                 </div>
               </div>
               <div class="col-lg-12">
@@ -267,11 +212,6 @@ https://templatemo.com/tm-582-tale-seo-agency
               <div class="col-lg-12">
                 <fieldset>
                   <input type="full-name" name="full-name" id="full-name" placeholder="Full Name" autocomplete="on" >
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">Get Your Free Quote</button>
                 </fieldset>
               </div>
             </div>
