@@ -174,7 +174,8 @@ https://templatemo.com/tm-582-tale-seo-agency
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Nomor Identitas (KTP)" autocomplete="on">
+                        <input type="subject" name="subject" id="subject" placeholder="Nomor Identitas (KTP)"
+                          autocomplete="on">
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
@@ -198,19 +199,107 @@ https://templatemo.com/tm-582-tale-seo-agency
                           required>
                       </fieldset>
                     </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="subject" name="subject" id="subject" placeholder="Lama Usaha Berjalan (Jika Ada)"
+                          autocomplete="on">
+                      </fieldset>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="section-heading">
+                        <h2><em>Dokumen Pendukung</em></h2>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <p class="description">Scan Fotocopy KTP/SIM/Paspor</p>
+                      <fieldset>
+                        <div class="file-upload-wrapper">
+                          <input type="file" name="ktp_sim_paspor" id="ktp_sim_paspor" accept="application/pdf"
+                            required>
+                          <label for="ktp_sim_paspor" class="file-upload-label">Upload File (PDF)</label>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div>
+                      <p class="description">Scan Fotocopy NPWP</p>
+                      <fieldset>
+                        <div class="file-upload-wrapper">
+                          <input type="file" name="file" id="file" accept="application/pdf" required>
+                          <label for="file" class="file-upload-label">Upload File (PDF)</label>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <p class="description">Scan Surat Izin Usaha (Jika ada)</p>
+                      <fieldset>
+                        <div class="file-upload-wrapper">
+                          <input type="file" name="surat_izin_usaha" id="surat_izin_usaha" accept="application/pdf">
+                          <label for="surat_izin_usaha" class="file-upload-label">Upload File (PDF)</label>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="section-heading">
+                        <h2><em>Detail Penyewaan</em></h2>
+                      </div>
+                    </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Lama Usaha Berjalan (Jika Ada)" autocomplete="on">
+                        <input type="name" name="name" id="name" placeholder="Jenis Ruko (Ketik hanya Angka)"
+                          autocomplete="on" required>
                       </fieldset>
                     </div>
-                    <div class="col-lg-12">
-                      <p class="description">Silakan unggah file PDF yang berisi proposal usaha Anda. Ukuran maksimum file adalah 2MB.</p>
-                        <input type="file" name="file" id="file" accept="application/pdf" required>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <select class="styled-select" name="duration" id="duration" required>
+                          <option value="">Pilih Durasi Penyewaan</option>
+                          <option value="3">3 Bulan</option>
+                          <option value="6">6 Bulan</option>
+                          <option value="12">12 Bulan</option>
+                        </select>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                        <input type="date" name="tanggal_penyewaan" id="tanggal_penyewaan"
+                          placeholder="Pilih Tanggal Penyewaan" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <div class="terms-conditions">
+                          <h3>Terms and Conditions</h3>
+                          <p>
+                            By using this service, you agree to the following terms and conditions:
+                          </p>
+                          <ul>
+                            <li>Your data will be securely stored and used in accordance with our privacy policy.</li>
+                            <li>All transactions are subject to our standard business terms and conditions.</li>
+                            <li>Use of the service is at your own risk. We are not liable for any damages.</li>
+                            <li>By continuing, you consent to our terms and policies.</li>
+                          </ul>
+                          <p>
+                            For more detailed information, please read our <a href="#full-terms" target="_blank">full
+                              terms and conditions</a>.
+                          </p>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <label>
+                          <input type="checkbox" id="agree-terms"> Saya menyetujui syarat dan ketentuan
+                        </label>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="orange-button" disabled>Send Message Now</button>
                       </fieldset>
                     </div>
 
@@ -454,6 +543,21 @@ https://templatemo.com/tm-582-tale-seo-agency
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkbox = document.getElementById('agree-terms');
+      const submitButton = document.getElementById('form-submit');
+
+      checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      });
+    });
+  </script>
 
 </body>
 
