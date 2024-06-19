@@ -1,5 +1,5 @@
 <?php
-require_once ('auth.php');
+require_once('auth.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +10,7 @@ require_once ('auth.php');
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <title>SIWARSA : Sistem Informasi Sewa Ruko Desa</title>
 
@@ -49,10 +48,8 @@ https://templatemo.com/tm-582-tale-seo-agency
             <ul>
               <li><a href="https://wa.me/6289631317064" target="_blank"><i class="fa fa-phone"></i>+62 89631317064</a>
               </li>
-              <li><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank"><i
-                    class="fa fa-envelope"></i>support@siwarsa.com</a></li>
-              <li><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank"><i
-                    class="fa fa-map-marker"></i>SIWARSA Headquarter</a></li>
+              <li><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank"><i class="fa fa-envelope"></i>support@siwarsa.com</a></li>
+              <li><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank"><i class="fa fa-map-marker"></i>SIWARSA Headquarter</a></li>
             </ul>
           </div>
         </div>
@@ -96,9 +93,9 @@ https://templatemo.com/tm-582-tale-seo-agency
               </li>
               <li class="scroll-to-section"><a href="#contact">Submission</a></li>
               <!-- ini buat submission(pikiranku abis ngisi data disini nanti dikirim ke page baru buat ngelengkapin datanya (disini data kecil kceilan)) -->
-              <?php if (!auth()): ?>
+              <?php if (!auth()) : ?>
                 <li class="scroll-to-section"><a href="login.php">Login</a></li><!-- ini awalnya #contact -->
-              <?php else: ?>
+              <?php else : ?>
                 <li class="has-sub sub-username">
                   <a href="javascript:void(0)"><?= $_SESSION['username'] ?></a>
                   <ul class="sub-menu">
@@ -137,25 +134,22 @@ https://templatemo.com/tm-582-tale-seo-agency
 
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Nama Lengkap" autocomplete="on" required>
+                        <input type="name" name="name" id="name" placeholder="Nama Lengkap" autocomplete="on" value="<?= $_SESSION['fullname'] ?>" readonly required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Nomor Telepon" autocomplete="on"
-                          required>
+                        <input type="surname" name="surname" id="surname" placeholder="Nomor Telepon" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Alamat E-mail"
-                          required="">
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Alamat E-mail" value="<?= $_SESSION['email'] ?>" readonly required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Nomor Identitas (KTP)"
-                          autocomplete="on">
+                        <input type="subject" name="subject" id="subject" placeholder="Nomor Identitas (KTP)" autocomplete="on">
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
@@ -175,14 +169,12 @@ https://templatemo.com/tm-582-tale-seo-agency
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Jenis Usaha" autocomplete="on"
-                          required>
+                        <input type="surname" name="surname" id="surname" placeholder="Jenis Usaha" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Lama Usaha Berjalan (Jika Ada)"
-                          autocomplete="on">
+                        <input type="subject" name="subject" id="subject" placeholder="Lama Usaha Berjalan (Jika Ada)" autocomplete="on">
                       </fieldset>
                     </div>
 
@@ -195,8 +187,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                       <p class="description">Scan Fotocopy KTP/SIM/Paspor</p>
                       <fieldset>
                         <div class="file-upload-wrapper">
-                          <input type="file" name="ktp_sim_paspor" id="ktp_sim_paspor" accept="application/pdf"
-                            required>
+                          <input type="file" name="ktp_sim_paspor" id="ktp_sim_paspor" accept="application/pdf" required>
                           <label for="ktp_sim_paspor" class="file-upload-label">Upload File (PDF)</label>
                         </div>
                       </fieldset>
@@ -228,8 +219,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Jenis Ruko (Ketik hanya Angka)"
-                          autocomplete="on" required>
+                        <input type="name" name="name" id="name" placeholder="Jenis Ruko (Ketik hanya Angka)" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
@@ -244,8 +234,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <input type="date" name="tanggal_penyewaan" id="tanggal_penyewaan"
-                          placeholder="Pilih Tanggal Penyewaan" required>
+                        <input type="date" name="tanggal_penyewaan" id="tanggal_penyewaan" placeholder="Pilih Tanggal Penyewaan" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
@@ -328,9 +317,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                             <h4>Best CSS Templates for you</h4>
                             <div class="line-dec"></div>
                             <p>Tale is the best SEO agency website template using Bootstrap v5.2.2 CSS for your company.
-                              It is a free download provided by TemplateMo. There are 3 HTML pages, <a
-                                href="index.html">Home</a>, <a href="about.html">About</a>, and <a
-                                href="faqs.html">FAQ</a>.</p>
+                              It is a free download provided by TemplateMo. There are 3 HTML pages, <a href="index.html">Home</a>, <a href="about.html">About</a>, and <a href="faqs.html">FAQ</a>.</p>
                             <div class="info">
                               <span>Website Design</span>
                               <span>User Interface</span>
@@ -469,11 +456,11 @@ https://templatemo.com/tm-582-tale-seo-agency
   <script src="assets/js/custom.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       const checkbox = document.getElementById('agree-terms');
       const submitButton = document.getElementById('form-submit');
 
-      checkbox.addEventListener('change', function () {
+      checkbox.addEventListener('change', function() {
         if (checkbox.checked) {
           submitButton.disabled = false;
         } else {

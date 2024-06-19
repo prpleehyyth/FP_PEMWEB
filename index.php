@@ -85,11 +85,11 @@ https://templatemo.com/tm-582-tale-seo-agency
                       <li class="has-sub">
                           <a href="javascript:void(0)">Bantuan</a>
                           <ul class="sub-menu">
-                              <li><a href="#contact">Komplain</a></li>
-                              <li><a href="faqs.html">FAQs  </a></li>
+                              <li><a href="History.php">History</a></li>
+                              <li><a href="pembayaran.php">Pembayaran</a></li>
                           </ul>
                       </li>
-                      <li class="scroll-to-section"><a href="about.php">Submission</a></li>
+                      <li class="scroll-to-section"><a href="about.php">Pengajuan</a></li>
                       <?php if(!auth()) : ?>
                       <li class="scroll-to-section"><a href="login.php">Login</a></li><!-- ini awalnya #contact -->
                       <?php else: ?>
