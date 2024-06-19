@@ -131,11 +131,9 @@ $result = $conn->query($sql);
                                                         <td><?php echo $row['status']; ?></td>
                                                         <td><img src="<?php echo $row['image']; ?>" width="100" /></td>
                                                         <td>
-                                                        <td>
                                                             <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#propertyModal" data-id="<?php echo $row['id']; ?>" data-tipe="<?php echo $row['tipe']; ?>" data-harga="<?php echo $row['harga']; ?>" data-no_ruko="<?php echo $row['no_ruko']; ?>" data-desc="<?php echo $row['desc']; ?>" data-status="<?php echo $row['status']; ?>" data-image="<?php echo $row['image']; ?>">Edit</button>
                                                             <button class="btn btn-danger btn-sm" onclick="deleteProperty(<?php echo $row['id']; ?>)">Delete</button>
                                                         </td>
-
                                                     </tr>
                                                 <?php endwhile; ?>
                                             </tbody>
@@ -178,7 +176,6 @@ $result = $conn->query($sql);
     <script src="dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
-
 
     <div class="modal fade" id="propertyModal" tabindex="-1" role="dialog" aria-labelledby="propertyModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -223,6 +220,7 @@ $result = $conn->query($sql);
                         <div class="form-group">
                             <label for="image">Image</label>
                             <input type="file" class="form-control-file" id="image" name="image">
+                            <img id="property-current-image" src="" width="100" style="display: none;" />
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -232,7 +230,6 @@ $result = $conn->query($sql);
                 </form>
             </div>
         </div>
-    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -259,6 +256,7 @@ $result = $conn->query($sql);
                 modal.find('#desc').val(desc);
                 modal.find('#status').val(status);
                 modal.find('#image').removeAttr('required');
+                modal.find('#property-current-image').attr('src', image).show();
             } else {
                 modal.find('.modal-title').text('Add Property');
                 modal.find('#property-id').val('');
@@ -269,6 +267,7 @@ $result = $conn->query($sql);
                 modal.find('#desc').val('');
                 modal.find('#status').val('available');
                 modal.find('#image').attr('required', 'required');
+                modal.find('#property-current-image').hide();
             }
         });
 
