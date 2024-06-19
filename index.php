@@ -203,42 +203,42 @@ https://templatemo.com/tm-582-tale-seo-agency
         <div class="col-lg-12">
           <div class="owl-features owl-carousel">
             <div class="item">
-              <img src="assets/images/projects-01.jpg" alt="">
+              <img src="assets/images/ruko1.png" alt="">
               <div class="down-content">
                 <h4>Digital Agency HTML Templates</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-02.jpg" alt="">
+              <img src="assets/images/ruko2.png" alt="">
               <div class="down-content">
                 <h4>Admin Dashboard CSS Templates</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-03.jpg" alt="">
+              <img src="assets/images/ruko3.png" alt="">
               <div class="down-content">
                 <h4>Best Responsive Website Layouts</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-04.jpg" alt="">
+              <img src="assets/images/ruko4.png" alt="">
               <div class="down-content">
                 <h4>HTML CSS Layouts for your websites</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-02.jpg" alt="">
+              <img src="assets/images/ruko5.png" alt="">
               <div class="down-content">
                 <h4>Bootstrap 5 Themes for Free</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/projects-03.jpg" alt="">
+              <img src="assets/images/ruko4.png" alt="">
               <div class="down-content">
                 <h4>Mobile Friendly Website Layouts</h4>
                 <a href="#"><i class="fa fa-link"></i></a>
