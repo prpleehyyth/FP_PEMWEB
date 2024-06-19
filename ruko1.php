@@ -29,10 +29,8 @@
 
 </head>
 <body class="hold-transition sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
   <!-- ***** Pre-Header Area Start ***** -->
-  <div class="pre-header">
+<div class="pre-header">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-sm-9">
@@ -104,10 +102,12 @@
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
-   
+<!-- Site wrapper -->
+<div class="wrapper">
+
+    
     <!-- Main content -->
     <section class="content">
-
       <!-- Default box -->
       <div class="card card-solid">
         <div class="card-body">
