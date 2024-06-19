@@ -149,7 +149,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                   <img src="assets/images/services-01.jpg" alt="discover SEO" class="templatemo-feature">
                 </div>
                 <a href="ruko1.php"><h4>Ruko 01</h4></a>
-                <p>Rumah Toko (Ruko) satu lantai di lokasi strategis pusat bisnis. Cocok untuk berbagai usaha dengan fasilitas lengkap. Akses mudah ke fasilitas umum dan lingkungan ramai dengan potensi pelanggan tinggi.</p>
+                <p>Rumah Toko (Ruko) satu lantai di lokasi strategis pusat bisnis. Cocok untuk berbagai usaha dengan fasilitas lengkap.</p>
               </div>
             </div>
             <div class="col-lg-6 col-sm-6">
