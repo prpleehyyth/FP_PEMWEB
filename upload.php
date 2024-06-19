@@ -15,7 +15,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['contact-form'])) {
     // Retrieve form data
     $id_user = $_SESSION['id'];
     $id_ruko = $_POST['Jenis_Ruko'];
