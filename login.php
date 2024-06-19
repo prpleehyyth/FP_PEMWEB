@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['username'] = $user['username']; // Use username as primary key
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['fullname'] = $user['fullname'];
+                    $_SESSION['id'] = $user['id'];
                     $message = "Login berhasil! Anda akan diarahkan.";
                     $redirect = true;
                 } else {

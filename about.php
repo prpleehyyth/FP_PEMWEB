@@ -178,40 +178,6 @@ https://templatemo.com/tm-582-tale-seo-agency
 
                     <div class="col-lg-12">
                       <div class="section-heading">
-                        <h2><em>Dokumen Pendukung</em></h2>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <p class="description">Scan Fotocopy KTP/SIM/Paspor</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="ktp_sim_paspor" id="ktp_sim_paspor" accept="application/pdf" required>
-                          <label for="ktp_sim_paspor" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
-                      </fieldset>
-                    </div>
-                    <div>
-                      <p class="description">Scan Fotocopy NPWP</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="NPWP" id="NPWP" accept="application/pdf" required>
-                          <label for="file" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
-                      </fieldset>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <p class="description">Scan Surat Izin Usaha (Jika ada)</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="surat_izin_usaha" id="surat_izin_usaha" accept="application/pdf">
-                          <label for="surat_izin_usaha" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
-                      </fieldset>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <div class="section-heading">
                         <h2><em>Detail Penyewaan</em></h2>
                       </div>
                     </div>
@@ -272,7 +238,7 @@ https://templatemo.com/tm-582-tale-seo-agency
 
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="orange-button" disabled>Submit Sekarang</button>
+                        <button type="submit" id="form-submit" name="submit" class="orange-button" disabled>Submit Sekarang</button>
                       </fieldset>
                     </div>
 
