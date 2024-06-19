@@ -124,7 +124,7 @@ https://templatemo.com/tm-582-tale-seo-agency
           <div class="contact-us-content">
             <div class="row">
               <div class="col-lg-12">
-                <form id="contact-form" action="" method="post" enctype="multipart/form-data">
+                <form id="contact-form" action="upload.php" method="post" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="section-heading">
@@ -134,27 +134,27 @@ https://templatemo.com/tm-582-tale-seo-agency
 
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Nama Lengkap" autocomplete="on" value="<?= $_SESSION['fullname'] ?>" readonly required>
+                        <input type="text" name="name" placeholder="Nama Lengkap" autocomplete="on" value="<?= $_SESSION['fullname'] ?>" readonly required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Nomor Telepon" autocomplete="on" required>
+                        <input type="text" name="nomor_telepon" placeholder="Nomor Telepon" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Alamat E-mail" value="<?= $_SESSION['email'] ?>" readonly required>
+                        <input type="text" name="email" pattern="[^ @]*@[^ @]*" placeholder="Alamat E-mail" value="<?= $_SESSION['email'] ?>" readonly required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Nomor Identitas (KTP)" autocomplete="on">
+                        <input type="text" name="no_ktp" placeholder="Nomor Identitas (KTP)" autocomplete="on">
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <textarea name="message" id="message" placeholder="Alamat Tempat Tinggal"></textarea>
+                        <textarea name="alamat" placeholder="Alamat Tempat Tinggal"></textarea>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
@@ -164,17 +164,17 @@ https://templatemo.com/tm-582-tale-seo-agency
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Nama Usaha" autocomplete="on" required>
+                        <input type="text" name="nama_usaha" placeholder="Nama Usaha" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Jenis Usaha" autocomplete="on" required>
+                        <input type="text" name="jenis_usaha" placeholder="Jenis Usaha" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Lama Usaha Berjalan (Jika Ada)" autocomplete="on">
+                        <input type="text" name="lama_usaha" placeholder="Lama Usaha Berjalan (Jika Ada)" autocomplete="on">
                       </fieldset>
                     </div>
 
@@ -196,7 +196,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                       <p class="description">Scan Fotocopy NPWP</p>
                       <fieldset>
                         <div class="file-upload-wrapper">
-                          <input type="file" name="file" id="file" accept="application/pdf" required>
+                          <input type="file" name="NPWP" id="NPWP" accept="application/pdf" required>
                           <label for="file" class="file-upload-label">Upload File (PDF)</label>
                         </div>
                       </fieldset>
@@ -218,8 +218,14 @@ https://templatemo.com/tm-582-tale-seo-agency
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Jenis Ruko (Ketik hanya Angka)" autocomplete="on" required>
+                    <fieldset>
+                        <select class="styled-select" name="Jenis_Ruko" id="Jenis_Ruko" required>
+                          <option value="">Pilih Jenis Ruko</option>
+                          <option value="1">Ruko 1</option>
+                          <option value="2">Ruko 2</option>
+                          <option value="3">Ruko 3</option>
+                          <option value="4">Ruko 4</option>
+                        </select>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
@@ -261,14 +267,14 @@ https://templatemo.com/tm-582-tale-seo-agency
                     <div class="col-lg-12">
                       <fieldset>
                         <label>
-                          <input type="checkbox" id="agree-terms"> Saya menyetujui syarat dan ketentuan
+                          <input type="checkbox" name="agree-terms" id="agree-terms"> Saya menyetujui syarat dan ketentuan
                         </label>
                       </fieldset>
                     </div>
 
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="orange-button" disabled>Send Message Now</button>
+                        <button type="submit" id="form-submit" class="orange-button" disabled>Submit Sekarang</button>
                       </fieldset>
                     </div>
 
