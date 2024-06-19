@@ -86,7 +86,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                           <a href="javascript:void(0)">Bantuan</a>
                           <ul class="sub-menu">
                               <li><a href="#contact">Komplain</a></li>
-                              <li><a href="faqs.html">FAQs  </a></li>
+                              <li><a href="pembayaran.php">FAQs  </a></li>
                           </ul>
                       </li>
                       <li class="scroll-to-section"><a href="about.php">Submission</a></li>
