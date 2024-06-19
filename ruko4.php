@@ -104,13 +104,13 @@
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-sm-6">
-              <h3 class="d-inline-block d-sm-none">Ruko 01 - Full Hijau</h3>
+              <h3 class="d-inline-block d-sm-none">Ruko 04 - Kuning Hijau</h3>
               <div class="col-12">
-                <img src="dist/img/display01.png" class="product-image" alt="Product Image">
+                <img src="dist/img/display04.png" class="product-image" alt="Product Image">
               </div>
             </div>
             <div class="col-12 col-sm-6">
-              <h3 class="my-3">Ruko 01 - Full Hijau</h3>
+              <h3 class="my-3">Ruko 04 - Kuning Hijau</h3>
               <p> Disewakan: Rumah Toko (Ruko) dengan lokasi strategis di pusat bisnis. Properti ini menawarkan ruang usaha yang luas dan ideal untuk berbagai jenis bisnis seperti retail, kantor, atau kafe. Lantai ini dilengkapi dengan fasilitas lengkap untuk memenuhi kebutuhan sehari-hari. Terletak di area dengan akses mudah ke berbagai fasilitas umum, properti ini menjamin keamanan dan berada di lingkungan yang ramai dengan potensi pelanggan tinggi. Investasi ini memberikan peluang keuntungan yang signifikan.</p>
               <hr>
               <h5>Ukuran : </h5>
