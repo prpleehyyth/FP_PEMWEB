@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
         id_user, id_ruko, nomor_telepon, no_ktp, alamat, nama_usaha, jenis_usaha, lama_usaha, durasi, tanggal_mulai, email
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("iississssss", $id_user, $id_ruko, $nomor_telepon, $no_ktp, $alamat, $nama_usaha, $jenis_usaha, $lama_usaha, $durasi, $tanggal_mulai, $email);
+    $stmt->bind_param("iisssssssss", $id_user, $id_ruko, $nomor_telepon, $no_ktp, $alamat, $nama_usaha, $jenis_usaha, $lama_usaha, $durasi, $tanggal_mulai, $email);
 
     if ($stmt->execute()) {
         echo "Form submitted successfully and data saved.";
