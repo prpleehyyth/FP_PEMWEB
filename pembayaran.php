@@ -32,7 +32,7 @@ $result = $stmt->get_result();
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <title>Tale SEO Agency - FAQ Page</title>
+  <title>SIWARSA</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
