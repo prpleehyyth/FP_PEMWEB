@@ -1,5 +1,24 @@
 <?php
-require_once('auth.php');
+require_once ('auth.php');
+
+include 'db_connect.php';
+
+// Start the session if not already started
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+
+// Ensure the session variable is set
+if (!isset($_SESSION['id'])) {
+  die("User ID is not set in session.");
+}
+
+// Prepare the SQL statement
+$stmt = $conn->prepare("SELECT * FROM pengajuan WHERE id_user = ?");
+$stmt->bind_param("i", $_SESSION['id']);
+$stmt->execute();
+$result = $stmt->get_result();
+
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +29,8 @@ require_once('auth.php');
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <title>Tale SEO Agency - FAQ Page</title>
 
@@ -38,16 +58,19 @@ https://templatemo.com/tm-582-tale-seo-agency
   <!-- ***** Preloader Start ***** -->
 
 
- <!-- ***** Pre-Header Area Start ***** -->
- <div class="pre-header">
+  <!-- ***** Pre-Header Area Start ***** -->
+  <div class="pre-header">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-sm-9">
           <div class="left-info">
             <ul>
-              <li><a href="https://wa.me/6289631317064" target="_blank"><i class="fa fa-phone"></i>+62 89631317064</a></li>
-              <li><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank"><i class="fa fa-envelope"></i>support@siwarsa.com</a></li>
-              <li><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank"><i class="fa fa-map-marker"></i>SIWARSA Headquarter</a></li>
+              <li><a href="https://wa.me/6289631317064" target="_blank"><i class="fa fa-phone"></i>+62 89631317064</a>
+              </li>
+              <li><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank"><i
+                    class="fa fa-envelope"></i>support@siwarsa.com</a></li>
+              <li><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank"><i
+                    class="fa fa-map-marker"></i>SIWARSA Headquarter</a></li>
             </ul>
           </div>
         </div>
@@ -90,9 +113,9 @@ https://templatemo.com/tm-582-tale-seo-agency
                 </ul>
               </li>
               <li class="scroll-to-section"><a href="about.php">Pengajuan</a></li>
-              <?php if (!auth()) : ?>
+              <?php if (!auth()): ?>
                 <li class="scroll-to-section"><a href="login.php">Login</a></li><!-- ini awalnya #contact -->
-              <?php else : ?>
+              <?php else: ?>
                 <li class="has-sub sub-username">
                   <a href="javascript:void(0)"><?= $_SESSION['username'] ?></a>
                   <ul class="sub-menu">
@@ -135,7 +158,11 @@ https://templatemo.com/tm-582-tale-seo-agency
               </div>
               <div class="accordion-body">
                 <div class="content">
-                  <p>Pembayaran melalui transfer bank adalah opsi yang disediakan untuk kenyamanan Anda. Anda dapat mentransfer pembayaran ke rekening bank yang disediakan setelah mengajukan pesanan. Pastikan untuk mencantumkan nomor pesanan Anda sebagai referensi dalam detail transfer Anda untuk memperlancar proses verifikasi dan pengolahan pesanan Anda.Berikut adalah nomor rekening yang dapat digunakan sebagai tujuan transfer </p>
+                  <p>Pembayaran melalui transfer bank adalah opsi yang disediakan untuk kenyamanan Anda. Anda dapat
+                    mentransfer pembayaran ke rekening bank yang disediakan setelah mengajukan pesanan. Pastikan untuk
+                    mencantumkan nomor pesanan Anda sebagai referensi dalam detail transfer Anda untuk memperlancar
+                    proses verifikasi dan pengolahan pesanan Anda.Berikut adalah nomor rekening yang dapat digunakan
+                    sebagai tujuan transfer </p>
                   <p> MANDIRI : 888888888, BNI :99999999</p>
                 </div>
               </div>
@@ -149,7 +176,10 @@ https://templatemo.com/tm-582-tale-seo-agency
               </div>
               <div class="accordion-body">
                 <div class="content">
-                  <p>Pembayaran melalui e-wallet adalah cara yang cepat dan efisien untuk menyelesaikan pembelian Anda. Anda dapat melakukan pembayaran dengan mudah melalui e-wallet pilihan Anda setelah mengajukan pesanan. Pastikan untuk memasukkan detail pesanan Anda sebagai referensi untuk memudahkan verifikasi dan pengolahan pesanan Anda.
+                  <p>Pembayaran melalui e-wallet adalah cara yang cepat dan efisien untuk menyelesaikan pembelian Anda.
+                    Anda dapat melakukan pembayaran dengan mudah melalui e-wallet pilihan Anda setelah mengajukan
+                    pesanan. Pastikan untuk memasukkan detail pesanan Anda sebagai referensi untuk memudahkan verifikasi
+                    dan pengolahan pesanan Anda.
                     <br><br>
                     Gopay : 0888888xxxx.
                   </p>
@@ -165,7 +195,10 @@ https://templatemo.com/tm-582-tale-seo-agency
               </div>
               <div class="accordion-body">
                 <div class="content">
-                  <p>Pembayaran melalui e-wallet adalah cara yang cepat dan efisien untuk menyelesaikan pembelian Anda. Anda dapat melakukan pembayaran dengan mudah melalui e-wallet pilihan Anda setelah mengajukan pesanan. Pastikan untuk memasukkan detail pesanan Anda sebagai referensi untuk memudahkan verifikasi dan pengolahan pesanan Anda.</p>
+                  <p>Pembayaran melalui e-wallet adalah cara yang cepat dan efisien untuk menyelesaikan pembelian Anda.
+                    Anda dapat melakukan pembayaran dengan mudah melalui e-wallet pilihan Anda setelah mengajukan
+                    pesanan. Pastikan untuk memasukkan detail pesanan Anda sebagai referensi untuk memudahkan verifikasi
+                    dan pengolahan pesanan Anda.</p>
                   <p>VA BANK ABC : 0763643XXXXX</p>
                 </div>
               </div>
@@ -174,31 +207,27 @@ https://templatemo.com/tm-582-tale-seo-agency
         </div>
         <div class="col-lg-6">
           <div class="get-free-quote">
-            <form id="free-quote" method="submit" role="search" action="#">
+            <form id="free-quote" method="submit" role="search" action="upload_payment_proof.php"
+              enctype="multipart/form-data">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="section-heading">
-                    <h2>Cek<em> Data Ajuan Anda</em> Terlebih Dahulu</h2>
+                    <h2>Unggah<em> Bukti Pembayaran</em></h2>
                   </div>
                 </div>
-                <div class="col-lg-12">
+                <div>
+                  <p class="description">Screenshot Pembayaran</p>
                   <fieldset>
-                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail" required="">
+                    <div class="file-upload-wrapper">
+                      <input type="file" name="payment_proof" id="payment_proof" accept="image/*,application/pdf"
+                        required>
+                      <label for="file" class="file-upload-label">Upload File (PDF)</label>
+                    </div>
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <input type="website" name="website" id="website" placeholder="Website URL" autocomplete="on" required>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <input type="phone-number" name="phone-number" id="phone-number" placeholder="Phone Number" autocomplete="on" required>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <input type="full-name" name="full-name" id="full-name" placeholder="Full Name" autocomplete="on">
+                    <button type="submit" class="main-button">Submit</button>
                   </fieldset>
                 </div>
               </div>
@@ -213,7 +242,7 @@ https://templatemo.com/tm-582-tale-seo-agency
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2036 <a href="#">SIWARSA : Sistem Informasi Sewa Ruko Desa</a>. All rights reserved. 
+        <p>Copyright © 2036 <a href="#">SIWARSA : Sistem Informasi Sewa Ruko Desa</a>. All rights reserved.
       </div>
     </div>
   </footer>

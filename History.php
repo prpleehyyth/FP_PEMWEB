@@ -1,9 +1,23 @@
 <?php
-require_once ('auth.php');
+require_once('auth.php');
 
 include 'db_connect.php';
 
-$result = $conn->query("SELECT * FROM pengajuan");
+// Start the session if not already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Ensure the session variable is set
+if (!isset($_SESSION['id'])) {
+    die("User ID is not set in session.");
+}
+
+// Prepare the SQL statement
+$stmt = $conn->prepare("SELECT * FROM pengajuan WHERE id_user = ?");
+$stmt->bind_param("i", $_SESSION['id']);
+$stmt->execute();
+$result = $stmt->get_result();
 
 ?>
 
