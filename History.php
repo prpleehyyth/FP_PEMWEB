@@ -1,5 +1,24 @@
 <?php
-require_once ('auth.php');
+require_once('auth.php');
+
+include 'db_connect.php';
+
+// Start the session if not already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Ensure the session variable is set
+if (!isset($_SESSION['id'])) {
+    die("User ID is not set in session.");
+}
+
+// Prepare the SQL statement
+$stmt = $conn->prepare("SELECT * FROM pengajuan WHERE id_user = ?");
+$stmt->bind_param("i", $_SESSION['id']);
+$stmt->execute();
+$result = $stmt->get_result();
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +32,7 @@ require_once ('auth.php');
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <title>Tale SEO Agency - FAQ Page</title>
+  <title>SIWARSA</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -119,110 +138,95 @@ https://templatemo.com/tm-582-tale-seo-agency
         <div class="col-lg-12">
           <div class="contact-us-content">
             <div class="row">
-              <div class="col-lg-12">
-                <form id="contact-form" action="" method="post" enctype="multipart/form-data">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="section-heading">
-                        <h2><em>Data diri</em></h2>
-                      </div>
-                    </div>
+              <class="col-lg-12">
+                
+              <?php
+                if ($result->num_rows > 0) {
+                    echo '<form id="contact-form" action="update_pengajuan.php" method="post">';
+                    echo '<div class="row">';
+                    echo '<div class="col-lg-12">';
+                    echo '<div class="section-heading">';
+                    echo '<h2><em>Isi data diri</em> &amp; <span>Sewa Ruko Anda</span></h2>';
+                    echo '</div>';
+                    echo '</div>';
 
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Nama Lengkap" autocomplete="on" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Nomor Telepon" autocomplete="on"
-                          required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Alamat E-mail"
-                          required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Nomor Identitas (KTP)"
-                          autocomplete="on">
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <textarea name="message" id="message" placeholder="Alamat Tempat Tinggal"></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="section-heading">
-                        <h2><em>Data Usaha</em></h2>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Nama Usaha" autocomplete="on" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Jenis Usaha" autocomplete="on"
-                          required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Lama Usaha Berjalan (Jika Ada)"
-                          autocomplete="on">
-                      </fieldset>
-                    </div>
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="nama[]" value="' . $row['nama_usaha'] . '" placeholder="Nama Usaha" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="nomor_telepon[]" value="' . $row['nomor_telepon'] . '" placeholder="Nomor Telepon" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="email[]" value="' . $row['email'] . '" placeholder="Alamat E-mail" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="no_ktp[]" value="' . $row['no_ktp'] . '" placeholder="Nomor Identitas (KTP)" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-12">';
+                        echo '<fieldset>';
+                        echo '<textarea name="alamat[]" placeholder="Alamat Tempat Tinggal" readonly>' . $row['alamat'] . '</textarea>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="nama_usaha[]" value="' . $row['nama_usaha'] . '" placeholder="Nama Usaha" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="jenis_usaha[]" value="' . $row['jenis_usaha'] . '" placeholder="Jenis Usaha" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-12">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="lama_usaha[]" value="' . $row['lama_usaha'] . '" placeholder="Lama Usaha Berjalan (Jika Ada)" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="jenis_ruko[]" value="' . $row['id_ruko'] . '" placeholder="Jenis Ruko" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="durasi[]" value="' . $row['durasi'] . '" placeholder="Durasi Penyewaan" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="date" name="tanggal_mulai[]" value="' . $row['tanggal_mulai'] . '" placeholder="Pilih Tanggal Penyewaan" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-6">';
+                        echo '<fieldset>';
+                        echo '<input type="text" name="status[]" value="' . $row['status'] . '" placeholder="Status Penyewaan" readonly>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                        echo '<div class="col-lg-12">';
+                        echo '<fieldset>';
+                        echo '<textarea name="keterangan[]" placeholder="Alasan" readonly>' . $row['keterangan'] . '</textarea>';
+                        echo '</fieldset>';
+                        echo '</div>';
+                    }
 
-                    <div class="col-lg-12">
-                      <div class="section-heading">
-                        <h2><em>Detail Penyewaan</em></h2>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Jenis Ruko (Ketik hanya Angka)"
-                          autocomplete="on" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <select class="styled-select" name="duration" id="duration" required>
-                          <option value="">Pilih Durasi Penyewaan</option>
-                          <option value="3">3 Bulan</option>
-                          <option value="6">6 Bulan</option>
-                          <option value="12">12 Bulan</option>
-                        </select>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <input type="date" name="tanggal_penyewaan" id="tanggal_penyewaan"
-                          placeholder="Pilih Tanggal Penyewaan" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="section-heading">
-                        <h2><em>Status Penyewaan</em></h2>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Status" autocomplete="on" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Keterangan" autocomplete="on" required>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
+                    echo '</div>';
+                    echo '</form>';
+                } else {
+                    echo '<p>No records found.</p>';
+                }
+                $conn->close();
+                ?>
+
+                
                 <div class="more-info">
                   <div class="row">
                     <div class="col-lg-4">

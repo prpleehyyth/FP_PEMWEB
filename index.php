@@ -121,8 +121,6 @@ https://templatemo.com/tm-582-tale-seo-agency
             <h4>Sewa<em> Ruko Bisnis </em> dengan <span>SIWARSA</span></h4>
             <p>SIWARSA adalah adalah sebuah website yang memfasilitasi proses penyewaan ruko antara pemerintah desa dan masyarakat, serta membantu pemerintah desa dalam mengatur proses administrasi dan operasional penyewaan desa untuk BUMDES. </p>
             <div class="main-button scroll-to-section"><a href="about.php">Sewa Ruko Kami</a></div>
-            <span>atau</span>
-            <div class="second-button"><a href="faqs.html">Lihat FAQs Kami</a></div>
           </div>
         </div>
       </div>
