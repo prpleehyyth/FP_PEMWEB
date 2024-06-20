@@ -38,7 +38,9 @@ if (isset($_POST['submit'])) {
     $stmt->bind_param("iisssssssss", $id_user, $id_ruko, $nomor_telepon, $no_ktp, $alamat, $nama_usaha, $jenis_usaha, $lama_usaha, $durasi, $tanggal_mulai, $email);
 
     if ($stmt->execute()) {
-        echo "Form submitted successfully and data saved.";
+         // If the form submission is successful, redirect to index.php
+         header("Location: index.php?message=success");
+         exit(); // Ensure no further code is executed after the redirection
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -47,3 +49,4 @@ if (isset($_POST['submit'])) {
 }
 
 $conn->close();
+
