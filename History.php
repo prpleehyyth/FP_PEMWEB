@@ -181,41 +181,6 @@ https://templatemo.com/tm-582-tale-seo-agency
 
                     <div class="col-lg-12">
                       <div class="section-heading">
-                        <h2><em>Dokumen Pendukung</em></h2>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <p class="description">Scan Fotocopy KTP/SIM/Paspor</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="ktp_sim_paspor" id="ktp_sim_paspor" accept="application/pdf"
-                            required>
-                          <label for="ktp_sim_paspor" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
-                      </fieldset>
-                    </div>
-                    <div>
-                      <p class="description">Scan Fotocopy NPWP</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="file" id="file" accept="application/pdf" required>
-                          <label for="file" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
-                      </fieldset>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <p class="description">Scan Surat Izin Usaha (Jika ada)</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="surat_izin_usaha" id="surat_izin_usaha" accept="application/pdf">
-                          <label for="surat_izin_usaha" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
-                      </fieldset>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <div class="section-heading">
                         <h2><em>Detail Penyewaan</em></h2>
                       </div>
                     </div>
@@ -239,6 +204,21 @@ https://templatemo.com/tm-582-tale-seo-agency
                       <fieldset>
                         <input type="date" name="tanggal_penyewaan" id="tanggal_penyewaan"
                           placeholder="Pilih Tanggal Penyewaan" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="section-heading">
+                        <h2><em>Status Penyewaan</em></h2>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="name" name="name" id="name" placeholder="Status" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="name" name="name" id="name" placeholder="Keterangan" autocomplete="on" required>
                       </fieldset>
                     </div>
                   </div>
