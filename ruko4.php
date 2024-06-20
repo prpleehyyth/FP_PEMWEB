@@ -70,7 +70,7 @@
                               <li><a href="faqs.html">FAQs  </a></li>
                           </ul>
                       </li>
-                      <li class="scroll-to-section"><a href="about.php">Submission</a></li>
+                      <li class="scroll-to-section"><a href="about.php">Pengajuan</a></li>
                       <?php if(!auth()) : ?>
                       <li class="scroll-to-section"><a href="login.php">Login</a></li>
                       <?php else: ?>
@@ -133,7 +133,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2024 <a href="https://adminlte.io">SIWARSA</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
