@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container main">
             <div class="row">
                 <div class="col-md-6 side-image">
-                    <img src="assets/images/fullSiwarsa.png" alt="">
+                    <img src="assets/images/siwarsafull.png" alt="">
                     <div class="text">
                         <h1 class="h1">Mari Bergabung Dengan Kami</h1>
                         <p class="h1">SIWARSA adalah platform penyewaan ruko antara pemerintah desa dan masyarakat</p>

@@ -838,12 +838,12 @@ Banner Style
 }
 
 .main-banner:after {
-  content: url(../images/ruko.png);
-  top: -1px;
-  right: 0;
+  content: url(../images/assetkanann.png);
+  top: 300px;
+  right: 30px;
   position: absolute;
-  width: 800px;
-  height: 746px;
+  width: 500px;
+  height: 446px;
   z-index: -1;
 }
 
@@ -866,7 +866,7 @@ Banner Style
 
 .main-banner .line-dec {
   margin: 30px 0px 20px 0px;
-  width: 210px;
+  width: 150px;
   height: 2px;
   background-color: #decdfa;
 }
