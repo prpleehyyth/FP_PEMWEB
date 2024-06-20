@@ -46,12 +46,9 @@ https://templatemo.com/tm-582-tale-seo-agency
         <div class="col-lg-8 col-sm-9">
           <div class="left-info">
             <ul>
-              <li><a href="https://wa.me/6289631317064" target="_blank"><i class="fa fa-phone"></i>+62 89631317064</a>
-              </li>
-              <li><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank"><i
-                    class="fa fa-envelope"></i>support@siwarsa.com</a></li>
-              <li><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank"><i
-                    class="fa fa-map-marker"></i>SIWARSA Headquarter</a></li>
+              <li><a href="https://wa.me/6289631317064" target="_blank"><i class="fa fa-phone"></i>+62 89631317064</a></li>
+              <li><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank"><i class="fa fa-envelope"></i>support@siwarsa.com</a></li>
+              <li><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank"><i class="fa fa-map-marker"></i>SIWARSA Headquarter</a></li>
             </ul>
           </div>
         </div>
@@ -83,20 +80,20 @@ https://templatemo.com/tm-582-tale-seo-agency
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#projects">Projects</a></li>
+              <li class="scroll-to-section"><a href="index.php" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="index.php">Services</a></li>
+              <li class="scroll-to-section"><a href="index.php">Projects</a></li>
               <li class="has-sub">
                 <a href="javascript:void(0)">Bantuan</a>
                 <ul class="sub-menu">
-                  <li><a href="#contact">Komplain</a></li>
-                  <li><a href="faqs.html">FAQs </a></li>
+                  <li><a href="History.php">History</a></li>
+                  <li><a href="pembayaran.php">Pembayaran</a></li>
                 </ul>
               </li>
-              <li class="scroll-to-section"><a href="about.php">Submission</a></li>
-              <?php if (!auth()): ?>
+              <li class="scroll-to-section"><a href="about.php">Pengajuan</a></li>
+              <?php if (!auth()) : ?>
                 <li class="scroll-to-section"><a href="login.php">Login</a></li><!-- ini awalnya #contact -->
-              <?php else: ?>
+              <?php else : ?>
                 <li class="has-sub sub-username">
                   <a href="javascript:void(0)"><?= $_SESSION['username'] ?></a>
                   <ul class="sub-menu">
@@ -276,28 +273,10 @@ https://templatemo.com/tm-582-tale-seo-agency
     </div>
   </div>
 
-  <div class="cta section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <h4>Are You Ready To Work &amp; Develop With Us ?<br>Don't Hesitate &amp; Contact Us !</h4>
-        </div>
-        <div class="col-lg-4">
-          <div class="main-button">
-            <a href="#">Contact Us Now!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2036 <a href="#">Tale SEO Agency</a>. All rights reserved.
-
-          <br>Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a>
-        </p>
+        <p>Copyright © 2036 <a href="#">SIWARSA : Sistem Informasi Sewa Ruko Desa</a>. All rights reserved. 
       </div>
     </div>
   </footer>

@@ -27,9 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Verify password
                 if (password_verify($password, $user['password'])) {
                     // Successful login, save user info in session
+                    $_SESSION['id'] = $user['id']; // Use username as primary key
                     $_SESSION['username'] = $user['username']; // Use username as primary key
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['fullname'] = $user['fullname'];
+                    $_SESSION['id'] = $user['id'];
                     $message = "Login berhasil! Anda akan diarahkan.";
                     $redirect = true;
                 } else {

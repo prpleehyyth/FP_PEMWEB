@@ -48,7 +48,6 @@
                   <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
                       <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
                       <div class="input-group-append">
                         <button type="submit" class="btn btn-default">
                           <i class="fas fa-search"></i>
@@ -62,6 +61,7 @@
                   <table class="table table-head-fixed text-nowrap">
                     <thead>
                       <tr>
+                        <th>ID</th>
                         <th>Email</th>
                         <th>Username</th>
                         <th>Fullname</th>
@@ -71,22 +71,55 @@
                     <tbody>
                       <?php
                       include 'db_connect.php';
-                      $sql = "SELECT email, username, fullname FROM users";
+
+                      // Add ID column if it doesn't exist
+                      $checkColumnSql = "SHOW COLUMNS FROM users LIKE 'id'";
+                      $checkColumnResult = $conn->query($checkColumnSql);
+
+                      if ($checkColumnResult->num_rows == 0) {
+                        $addColumnSql = "ALTER TABLE users ADD id INT AUTO_INCREMENT PRIMARY KEY FIRST";
+                        if (!$conn->query($addColumnSql)) {
+                          echo "Error adding ID column: " . $conn->error;
+                        }
+                      }
+
+                      // Handle delete with POST method
+                      if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
+                        $idToDelete = $_POST['delete_id'];
+                        $deleteSql = "DELETE FROM users WHERE id = ?";
+                        $stmt = $conn->prepare($deleteSql);
+                        $stmt->bind_param("i", $idToDelete);
+                        if ($stmt->execute()) {
+                          echo "<script>alert('User deleted successfully'); window.location.href='master_user.php';</script>";
+                        } else {
+                          echo "Error deleting user: " . $conn->error;
+                        }
+                        $stmt->close();
+                      }
+
+                      // Fetch data
+                      $sql = "SELECT id, email, username, fullname FROM users";
                       $result = $conn->query($sql);
 
                       if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                           echo "<tr>";
+                          echo "<td>" . $row["id"] . "</td>";
                           echo "<td>" . $row["email"] . "</td>";
                           echo "<td>" . $row["username"] . "</td>";
                           echo "<td>" . $row["fullname"] . "</td>";
-                          echo "<td><a href='edit.php?id=" . $row['username'] . "' class='btn btn-info'>Edit</a>
-                                    <a href='delete.php?id=" . $row['username'] . "' class='btn btn-danger'>Delete</a></td>";
+                          echo "<td>
+                                  <form action='' method='POST' style='display:inline;' onsubmit=\"return confirm('Are you sure you want to delete this user?');\">
+                                    <input type='hidden' name='delete_id' value='" . $row['id'] . "'>
+                                    <button type='submit' class='btn btn-danger'>Delete</button>
+                                  </form>
+                                </td>";
                           echo "</tr>";
                         }
                       } else {
                         echo "<tr><td colspan='5'>No users found</td></tr>";
                       }
+
                       $conn->close();
                       ?>
                     </tbody>
@@ -109,12 +142,6 @@
       </div>
       <strong>Copyright &copy; 2024 SIWARSA.</strong> All rights reserved.
     </footer>
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
   </div>
   <!-- ./wrapper -->
 
@@ -124,8 +151,6 @@
   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.min.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="dist/js/demo.js"></script>
 </body>
 
 </html>

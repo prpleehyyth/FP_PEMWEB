@@ -40,14 +40,13 @@ https://templatemo.com/tm-582-tale-seo-agency
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Pre-Header Area Start ***** -->
-  <div class="pre-header" id="top">
+  <div class="pre-header">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-sm-9">
           <div class="left-info">
             <ul>
-              <li><a href="https://wa.me/6289631317064" target="_blank"><i class="fa fa-phone"></i>+62 89631317064</a>
-              </li>
+              <li><a href="https://wa.me/6289631317064" target="_blank"><i class="fa fa-phone"></i>+62 89631317064</a></li>
               <li><a href="https://mailto:22082010098@student.upnjatim.ac.id" target="_blank"><i class="fa fa-envelope"></i>support@siwarsa.com</a></li>
               <li><a href="https://maps.app.goo.gl/4Vzup13GjnDdAGG57" target="_blank"><i class="fa fa-map-marker"></i>SIWARSA Headquarter</a></li>
             </ul>
@@ -76,23 +75,22 @@ https://templatemo.com/tm-582-tale-seo-agency
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.php" class="logo">
-              <img src="assets/images/logo_onlyy.png" alt="" style="max-width: 112px;">
+              <img src="assets/images/logo_onlyy.png" alt="" style="max-width: 150px;">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a href="index.php" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#projects">Projects</a></li>
+              <li class="scroll-to-section"><a href="index.php">Services</a></li>
+              <li class="scroll-to-section"><a href="index.php">Projects</a></li>
               <li class="has-sub">
-                <a href="javascript:void(0)">Pages</a>
+                <a href="javascript:void(0)">Bantuan</a>
                 <ul class="sub-menu">
-                  <li><a href="about.php">About Us</a></li>
-                  <li><a href="faqs.html">FAQs</a></li>
+                  <li><a href="History.php">History</a></li>
+                  <li><a href="pembayaran.php">Pembayaran</a></li>
                 </ul>
               </li>
-              <li class="scroll-to-section"><a href="#contact">Submission</a></li>
-              <!-- ini buat submission(pikiranku abis ngisi data disini nanti dikirim ke page baru buat ngelengkapin datanya (disini data kecil kceilan)) -->
+              <li class="scroll-to-section"><a href="about.php">Pengajuan</a></li>
               <?php if (!auth()) : ?>
                 <li class="scroll-to-section"><a href="login.php">Login</a></li><!-- ini awalnya #contact -->
               <?php else : ?>
@@ -115,7 +113,7 @@ https://templatemo.com/tm-582-tale-seo-agency
   </header>
   <!-- ***** Header Area End ***** -->
 
-  
+
 
   <div class="contact-us section" id="contact">
     <div class="container">
@@ -124,7 +122,7 @@ https://templatemo.com/tm-582-tale-seo-agency
           <div class="contact-us-content">
             <div class="row">
               <div class="col-lg-12">
-                <form id="contact-form" action="" method="post" enctype="multipart/form-data">
+                <form id="contact-form" action="upload.php" method="post" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="section-heading">
@@ -134,27 +132,27 @@ https://templatemo.com/tm-582-tale-seo-agency
 
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Nama Lengkap" autocomplete="on" value="<?= $_SESSION['fullname'] ?>" readonly required>
+                        <input type="text" name="name" placeholder="Nama Lengkap" autocomplete="on" value="<?= $_SESSION['fullname'] ?>" readonly required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Nomor Telepon" autocomplete="on" required>
+                        <input type="text" name="nomor_telepon" placeholder="Nomor Telepon" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Alamat E-mail" value="<?= $_SESSION['email'] ?>" readonly required>
+                        <input type="text" name="email" pattern="[^ @]*@[^ @]*" placeholder="Alamat E-mail" value="<?= $_SESSION['email'] ?>" readonly required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Nomor Identitas (KTP)" autocomplete="on">
+                        <input type="text" name="no_ktp" placeholder="Nomor Identitas (KTP)" autocomplete="on">
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <textarea name="message" id="message" placeholder="Alamat Tempat Tinggal"></textarea>
+                        <textarea name="alamat" placeholder="Alamat Tempat Tinggal"></textarea>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
@@ -164,51 +162,17 @@ https://templatemo.com/tm-582-tale-seo-agency
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Nama Usaha" autocomplete="on" required>
+                        <input type="text" name="nama_usaha" placeholder="Nama Usaha" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Jenis Usaha" autocomplete="on" required>
+                        <input type="text" name="jenis_usaha" placeholder="Jenis Usaha" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Lama Usaha Berjalan (Jika Ada)" autocomplete="on">
-                      </fieldset>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <div class="section-heading">
-                        <h2><em>Dokumen Pendukung</em></h2>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <p class="description">Scan Fotocopy KTP/SIM/Paspor</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="ktp_sim_paspor" id="ktp_sim_paspor" accept="application/pdf" required>
-                          <label for="ktp_sim_paspor" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
-                      </fieldset>
-                    </div>
-                    <div>
-                      <p class="description">Scan Fotocopy NPWP</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="file" id="file" accept="application/pdf" required>
-                          <label for="file" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
-                      </fieldset>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <p class="description">Scan Surat Izin Usaha (Jika ada)</p>
-                      <fieldset>
-                        <div class="file-upload-wrapper">
-                          <input type="file" name="surat_izin_usaha" id="surat_izin_usaha" accept="application/pdf">
-                          <label for="surat_izin_usaha" class="file-upload-label">Upload File (PDF)</label>
-                        </div>
+                        <input type="text" name="lama_usaha" placeholder="Lama Usaha Berjalan (Jika Ada)" autocomplete="on">
                       </fieldset>
                     </div>
 
@@ -218,8 +182,14 @@ https://templatemo.com/tm-582-tale-seo-agency
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Jenis Ruko (Ketik hanya Angka)" autocomplete="on" required>
+                    <fieldset>
+                        <select class="styled-select" name="Jenis_Ruko" id="Jenis_Ruko" required>
+                          <option value="">Pilih Jenis Ruko</option>
+                          <option value="1">Ruko 1</option>
+                          <option value="2">Ruko 2</option>
+                          <option value="3">Ruko 3</option>
+                          <option value="4">Ruko 4</option>
+                        </select>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
@@ -261,14 +231,14 @@ https://templatemo.com/tm-582-tale-seo-agency
                     <div class="col-lg-12">
                       <fieldset>
                         <label>
-                          <input type="checkbox" id="agree-terms"> Saya menyetujui syarat dan ketentuan
+                          <input type="checkbox" name="agree-terms" id="agree-terms"> Saya menyetujui syarat dan ketentuan
                         </label>
                       </fieldset>
                     </div>
 
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="orange-button" disabled>Send Message Now</button>
+                        <button type="submit" id="form-submit" name="submit" class="orange-button" disabled>Submit Sekarang</button>
                       </fieldset>
                     </div>
 
@@ -303,142 +273,11 @@ https://templatemo.com/tm-582-tale-seo-agency
       </div>
     </div>
   </div>
-  
-
-  <div class="happy-clients section">
-    <div class="container">
-      <div class="row">
-                <div class="col-lg-12">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="row">
-                          <div class="col-lg-7">
-                            <h4>Best CSS Templates for you</h4>
-                            <div class="line-dec"></div>
-                            <p>Tale is the best SEO agency website template using Bootstrap v5.2.2 CSS for your company.
-                              It is a free download provided by TemplateMo. There are 3 HTML pages, <a href="index.html">Home</a>, <a href="about.html">About</a>, and <a href="faqs.html">FAQ</a>.</p>
-                            <div class="info">
-                              <span>Website Design</span>
-                              <span>User Interface</span>
-                              <span>User Experience</span>
-                              <span class="last-span">Digital Agency</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor
-                              incididunt ut labore et dolore dolor dolor sit amet, consectetur adipicing elit, sed doers
-                              eiusmod.</p>
-                          </div>
-                          <div class="col-lg-5 align-self-center">
-                            <img src="assets/images/happyclient-01.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="row">
-                          <div class="col-lg-7">
-                            <h4>Detailed Information On What We Do</h4>
-                            <div class="line-dec"></div>
-                            <p>You are free to use this template for any purpose. You are not allowed to redistribute
-                              the downloadable ZIP file of Tale SEO Template on any other template website. Please
-                              contact us. Thank you.</p>
-                            <div class="info">
-                              <span>HTML CSS</span>
-                              <span>Bootstrap 5</span>
-                              <span>TemplateMo</span>
-                              <span class="last-span">Development</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor
-                              incididunt ut labore et dolore dolor dolor sit amet, consectetur adipicing elit, sed doers
-                              eiusmod.</p>
-                          </div>
-                          <div class="col-lg-5 align-self-center">
-                            <img src="assets/images/happyclient-01.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="row">
-                          <div class="col-lg-7">
-                            <h4>Responsive HTML CSS Templates</h4>
-                            <div class="line-dec"></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod kent tempor
-                              incididunt ut labore et dolore dolor.</p>
-                            <div class="info">
-                              <span>SEO Trend</span>
-                              <span>Digital Agency</span>
-                              <span>Best Template</span>
-                              <span class="last-span">Development</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor
-                              incididunt ut labore et dolore dolor dolor sit amet, consectetur adipicing elit, sed doers
-                              eiusmod.</p>
-                          </div>
-                          <div class="col-lg-5 align-self-center">
-                            <img src="assets/images/happyclient-01.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="row">
-                          <div class="col-lg-7">
-                            <h4>Detailed Information about SEO Techniques</h4>
-                            <div class="line-dec"></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod kent tempor
-                              incididunt ut labore et dolore dolor.</p>
-                            <div class="info">
-                              <span>Data Analysis</span>
-                              <span>SEO Trend</span>
-                              <span>Templates</span>
-                              <span class="last-span">Research</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor
-                              incididunt ut labore et dolore dolor dolor sit amet, consectetur adipicing elit, sed doers
-                              eiusmod.</p>
-                          </div>
-                          <div class="col-lg-5 align-self-center">
-                            <img src="assets/images/happyclient-01.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cta section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <h4>Are You Ready To Work &amp; Develop With Us ?<br>Don't Hesitate &amp; Contact Us !</h4>
-        </div>
-        <div class="col-lg-4">
-          <div class="main-button">
-            <a href="#">Contact Us Now!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2036 <a href="#">Tale SEO Agency</a>. All rights reserved.
-
-          <br>Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a>
-        </p>
+        <p>Copyright © 2036 <a href="#">SIWARSA : Sistem Informasi Sewa Ruko Desa</a>. All rights reserved. 
       </div>
     </div>
   </footer>
